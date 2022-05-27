@@ -5,46 +5,197 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Landing Page</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- normalize -->
     <link rel="stylesheet" href="./normalize.css" />
     <!-- styles -->
     <link rel="stylesheet" href="./styles.css" />
+    <!-- js -->
+    <script src="./app.js" defer async></script>
   </head>
   <body>
-    <header id="header">
-      <img src="./logo.png" alt="logo handspinner" id="header-img" />
+    <!-- nav button -->
+    <span class="nav-btn"><i class="fa-solid fa-bars"></i></span>
+    <!-- HEADER -->
+    <header id="header" class="header">
+      <!-- close button -->
+      <span class="close-btn">
+        <i class="fa-solid fa-xmark"></i>
+      </span>
       <nav id="nav-bar">
-        <ul>
+        <div class="logo">
+          <img src="./logo.png" alt="logo handspinner" id="header-img" />
+          <a href="./index.html">original handspinner</a>
+        </div>
+        <ul class="nav-links">
           <li>
-            <a href="#" class="nav-link">fonctionnalités</a>
+            <a href="#features" class="nav-link">fonctionnalités</a>
           </li>
           <li>
-            <a href="#" class="nav-link">comment ça marche</a>
+            <a href="#how-it-works" class="nav-link">comment ça marche</a>
           </li>
           <li>
-            <a href="#" class="nav-link">prix</a>
+            <a href="#pricing" class="nav-link">prix</a>
           </li>
         </ul>
       </nav>
+    </header>
+    <!-- END OF HEADER -->
+    <!-- HERO -->
+    <section class="hero">
       <form action="https://www.freecodecamp.com/email-submit" id="form">
-        <input
-          type="email"
-          name="name"
-          id="email"
-          placeholder="Entrez votre adresse email"
-        />
-        <input type="submit" value="commencer" />
+        <h4>chefs-d'oeuvres artisanaux faits maison</h4>
+        <div class="form-row">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Entrez votre adresse email"
+          />
+        </div>
+        <input type="submit" id="submit" value="commencer" />
       </form>
+    </section>
+    <!-- END OF HERO -->
+    <!-- FEATURES -->
+    <!-- feature 1 -->
+    <section id="features">
+      <div class="features-center">
+        <div class="feature">
+          <span class="feature-icon"
+            ><i class="fa-solid fa-fire-flame-curved"></i
+          ></span>
+          <div>
+            <h4 class="feature-title">premium materials</h4>
+            <p class="feature-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo
+              earum provident temporibus iste sint deleniti?
+            </p>
+          </div>
+        </div>
+        <!-- end of feature 1 -->
+        <!-- feature 2 -->
+        <div class="feature">
+          <span class="feature-icon"
+            ><i class="fa-solid fa-truck-fast"></i
+          ></span>
+          <div>
+            <h4 class="feature-title">premium materials</h4>
+            <p class="feature-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo
+              earum provident temporibus iste sint deleniti?
+            </p>
+          </div>
+        </div>
+        <!-- end of feature 2 -->
+        <!-- feature 3 -->
+        <div class="feature">
+          <span class="feature-icon"
+            ><i class="fa-solid fa-battery-full"></i
+          ></span>
+          <div>
+            <h4 class="feature-title">premium materials</h4>
+            <p class="feature-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo
+              earum provident temporibus iste sint deleniti?
+            </p>
+          </div>
+        </div>
+        <!-- end of feature 3 -->
+      </div>
+    </section>
+    <!-- END OF FEATURES -->
+    <!-- HOW IT WORKS -->
+    <div id="how-it-works">
       <iframe
         id="video"
-        width="894"
-        height="503"
+        width="560"
+        height="315"
         src="https://www.youtube.com/embed/Z5x0Y1SIGC4"
         title="YouTube video player"
-        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        style="border: none"
         allowfullscreen
       ></iframe>
-    </header>
+    </div>
+    <!-- END OF HOW IT WORKS -->
+    <!-- PRICING -->
+    <section id="pricing">
+      <!-- card 1 -->
+      <div class="card">
+        <div class="card-title">
+          <h5>handspinner plastique</h5>
+        </div>
+        <div class="card-body">
+          <span class="price">600&euro;</span>
+          <ul>
+            <li>Lorem.</li>
+            <li>Placeat!</li>
+            <li>Delectus.</li>
+            <li>Voluptate.</li>
+          </ul>
+          <button class="btn">sélectionner</button>
+        </div>
+      </div>
+      <!-- end of card 1 -->
+      <!-- card 2 -->
+      <div class="card">
+        <div class="card-title">
+          <h5>handspinner métal</h5>
+        </div>
+        <div class="card-body">
+          <span class="price">900&euro;</span>
+          <ul>
+            <li>Lorem, ipsum.</li>
+            <li>Nisi, beatae.</li>
+            <li>Laudantium, nesciunt!</li>
+            <li>Ullam, eaque.</li>
+          </ul>
+          <button class="btn">sélectionner</button>
+        </div>
+      </div>
+      <!-- end of card 2 -->
+      <!-- card 3 -->
+      <div class="card">
+        <div class="card-title">
+          <h5>handspinner custom</h5>
+        </div>
+        <div class="card-body">
+          <span class="price">1200&euro;</span>
+          <ul>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Repellendus, culpa quod?</li>
+            <li>Perspiciatis, ipsa iste.</li>
+            <li>Molestias, minus sit.</li>
+          </ul>
+          <button class="btn">sélectionner</button>
+        </div>
+      </div>
+      <!-- end of card 3 -->
+    </section>
+    <!-- END OF PRICING -->
+    <!-- FOOTER -->
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a href="#" class="nav-link">intimité</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">termes</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">contact</a>
+        </li>
+      </ul>
+      <span class="copyright">copyright &copy; 2022, original handspinner</span>
+    </footer>
+    <!-- END OF FOOTER -->
   </body>
 </html>
