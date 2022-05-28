@@ -119,6 +119,7 @@ a {
   text-decoration: none;
   text-transform: capitalize;
   color: var(--textColor);
+  -webkit-transition: var(---transition);
   transition: var(---transition);
 }
 
@@ -130,6 +131,7 @@ ul {
 .img {
   width: 100%;
   display: block;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -144,6 +146,7 @@ ul {
   letter-spacing: var(--letter-spacing);
   padding: 0.375rem 0.75rem;
   box-shadow: var(--shadow-1);
+  -webkit-transition: var(---transition);
   transition: var(---transition);
   text-transform: capitalize;
   display: inline-block;
@@ -193,8 +196,12 @@ ul {
   max-width: var(--fixed-width);
   padding: 2rem 2.5rem;
   margin: 3rem auto;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
+  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -223,6 +230,26 @@ ul {
 
 .form-textarea {
   height: 7rem;
+}
+
+::-webkit-input-placeholder {
+  font-family: inherit;
+  color: var(--grey-400);
+}
+
+::-moz-placeholder {
+  font-family: inherit;
+  color: var(--grey-400);
+}
+
+:-ms-input-placeholder {
+  font-family: inherit;
+  color: var(--grey-400);
+}
+
+::-ms-input-placeholder {
+  font-family: inherit;
+  color: var(--grey-400);
 }
 
 ::placeholder {
@@ -257,14 +284,19 @@ ul {
   background-color: var(--backgroundColor);
   position: fixed;
   inset: 0;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-transition: var(---transition);
   transition: var(---transition);
   box-shadow: var(--shadow-1);
 }
 
 .header {
+  -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
@@ -277,8 +309,12 @@ ul {
 }
 
 .nav-links {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
+  -webkit-box-align: center;
   align-items: center;
   gap: 6rem;
 }
@@ -292,6 +328,7 @@ ul {
 }
 
 .show-nav {
+  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
@@ -305,31 +342,41 @@ ul {
 
 @media screen and (min-width: 768px) {
   #header {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     left: 0;
   }
 
   .header {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 
   #nav-bar {
+    display: -webkit-box;
     display: flex;
     justify-content: space-around;
     width: 100%;
   }
 
   .nav-links {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
+    -webkit-box-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: center;
     align-items: center;
     gap: 2rem;
   }
 
   .logo {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-align: center;
     align-items: center;
     text-transform: capitalize;
   }
@@ -361,7 +408,9 @@ section,
 }
 
 .feature {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
   gap: 4rem;
 }
@@ -415,15 +464,22 @@ section,
 /** CARDS */
 
 #pricing {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: center;
   justify-content: center;
   gap: 1rem;
 }
 
 @media screen and (min-width: 768px) {
   #pricing {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
   }
 }
@@ -434,10 +490,12 @@ section,
   width: 100%;
   max-width: 300px;
   box-shadow: var(--shadow-3);
+  -webkit-transition: var(---transition);
   transition: var(---transition);
 }
 
 .card:hover {
+  -webkit-transform: scale(1.02);
   transform: scale(1.02);
   box-shadow: var(--shadow-4);
 }
@@ -465,8 +523,12 @@ section,
 /** FOOTER */
 .footer {
   background-color: var(--grey-200);
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
+  -webkit-box-align: center;
   align-items: center;
   padding: 0.5rem 0;
 }
@@ -479,11 +541,13 @@ section,
 @media screen and (min-width: 992px) {
   .footer {
     padding: 0.5rem 10rem;
+    -webkit-box-align: end;
     align-items: flex-end;
   }
 }
 
 .footer-links {
+  display: -webkit-box;
   display: flex;
   gap: 1rem;
   margin: 0;
