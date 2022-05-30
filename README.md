@@ -24,7 +24,7 @@
 
 11. Dans le formulaire, il y a une input de type="submit" avec un id="submit"
 
-12. Quand on clique sur l'élément #submit, l'email est soumis a une page statique (utiliser formspree)
+<!-- 12. Quand on clique sur l'élément #submit, l'email est soumis a une page statique (utiliser formspree) -->
 
 13. La navbar doit toujours être en haut de la fenêtre
 
