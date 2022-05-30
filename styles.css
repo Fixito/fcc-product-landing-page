@@ -328,9 +328,12 @@ ul {
   .nav-link {
     text-transform: capitalize;
     color: var(--grey-900);
-    font-weight: bold;
     letter-spacing: var(--letter-spacing);
     transition: var(---transition);
+  }
+
+  .nav-links a {
+    font-weight: bold;
   }
 
   .nav-link:hover {
