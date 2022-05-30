@@ -1,28 +1,17 @@
 const menuIcon = document.querySelector('.nav-btn');
-const header = document.querySelector('header');
+const sidebar = document.querySelector('.sidebar');
 const closeBtn = document.querySelector('.close-btn');
-const navLinks = document.querySelector('.nav-links');
+const sidebarLinks = document.querySelector('.sidebar-links');
 
-menuIcon.addEventListener(
-  'click',
-  () => {
-    header.classList.add('show-nav');
-  },
-  { passive: true }
-);
+menuIcon.addEventListener('click', () => {
+  sidebar.classList.add('show-sidebar');
+});
 
-closeBtn.addEventListener(
-  'click',
-  () => {
-    header.classList.remove('show-nav');
-  },
-  { passive: true }
-);
+closeBtn.addEventListener('click', () => {
+  sidebar.classList.remove('show-sidebar');
+});
 
-navLinks.addEventListener(
-  'click',
-  () => {
-    header.classList.remove('show-nav');
-  },
-  { passive: true }
-);
+sidebarLinks.addEventListener('click', () => {
+  console.log('test');
+  sidebar.classList.remove('show-sidebar');
+});
