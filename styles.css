@@ -355,6 +355,9 @@ ul {
 }
 
 .feature-icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--primary-400);
   color: var(--primary-700);
   font-size: 2rem;
   display: inline-block;
@@ -453,6 +456,7 @@ ul {
 }
 
 .fa-circle-check {
+  margin-right: 0.5rem;
   color: var(--primary-500);
 }
 
