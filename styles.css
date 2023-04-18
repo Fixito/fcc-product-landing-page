@@ -217,8 +217,10 @@ ul {
 .logo {
   display: flex;
   align-items: center;
-  -moz-column-gap: 0.5rem;
   column-gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  font-weight: bold;
 }
 
 .nav-toggle {
