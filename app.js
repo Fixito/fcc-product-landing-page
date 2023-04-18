@@ -1,14 +1,22 @@
-const navBtn = document.querySelector('.nav-toggle');
-const links = document.querySelector('.nav-links');
-const scrollLinks = document.querySelectorAll('.nav-link');
-const date = document.querySelector('#date');
 const header = document.querySelector('#header');
 const headerHeight = header.getBoundingClientRect().height;
+const navBtn = document.querySelector('.nav-toggle');
+const linksContainer = document.querySelector('.links-container');
+const links = document.querySelector('.nav-links');
+const linksHeight = links.getBoundingClientRect().height;
+const scrollLinks = document.querySelectorAll('.nav-link');
+const date = document.querySelector('#date');
 
 date.textContent = new Date().getFullYear();
 
 navBtn.addEventListener('click', () => {
-  links.classList.toggle('show-links');
+  const linksContainerHeight = linksContainer.getBoundingClientRect().height;
+
+  if (linksContainerHeight === 0) {
+    linksContainer.style.height = `${linksHeight}px`;
+  } else {
+    linksContainer.style.height = 0;
+  }
 });
 
 scrollLinks.forEach((link) => {
